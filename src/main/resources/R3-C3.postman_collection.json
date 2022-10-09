@@ -1,0 +1,214 @@
+{
+	"info": {
+		"_postman_id": "324913a9-c9a3-4121-b813-76ddc97f7fd3",
+		"name": "R3-C3",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "18243835"
+	},
+	"item": [
+		{
+			"name": "GetAllCategory",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "GetCategoryById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/Category/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"Category",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "SaveCategory",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\t{\"name\":\"cat1\",\"description\":\"test category\"}"
+				},
+				"url": {
+					"raw": "{{url}}/api/Message/save",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"Message",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UpdateCategory",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\t{\"id\":1,\"name\":\"Categoria 1 1\",\"description\":\"Hacienda Lucas via capital\",\"extension\":440}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/Category/update",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"Category",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteCategory",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "{{url}}/api/Category/Delete/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"Category",
+						"Delete",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GetMessage",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		},
+		{
+			"name": "GetMessageById",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/Message/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"Message",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PutMessage",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "{{url}}/api/Message/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"Message",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PostMessage",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "\t{\r\n        \"messageText\":\"Me gusta.\",\r\n        \"client\":{\"idClient\":1},\r\n        \"farm\":{\"id\":1}\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/Message/save",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"Message",
+						"save"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteMessage",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{url}}/api/Message/1",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"Message",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
