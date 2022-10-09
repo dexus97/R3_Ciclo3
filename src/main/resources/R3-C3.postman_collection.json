@@ -43,13 +43,13 @@
 					"raw": "\t{\"name\":\"cat1\",\"description\":\"test category\"}"
 				},
 				"url": {
-					"raw": "{{url}}/api/Message/save",
+					"raw": "{{url}}/api/Category/save",
 					"host": [
 						"{{url}}"
 					],
 					"path": [
 						"api",
-						"Message",
+						"Category",
 						"save"
 					]
 				}
@@ -161,7 +161,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "\t{\r\n        \"messageText\":\"Me gusta.\",\r\n        \"client\":{\"idClient\":1},\r\n        \"farm\":{\"id\":1}\r\n    }",
+					"raw": "\t{\r\n        \"messageText\":\"Me gusta.\"\r\n    }",
 					"options": {
 						"raw": {
 							"language": "json"

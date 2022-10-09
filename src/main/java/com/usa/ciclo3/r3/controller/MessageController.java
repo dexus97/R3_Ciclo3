@@ -11,7 +11,7 @@ import java.util.List;
 import java.util.Optional;
 
 @RestController
-@RequestMapping(name="/api/Message")
+@RequestMapping("/api/Message")
 public class MessageController {
 
     @Autowired
@@ -22,12 +22,12 @@ public class MessageController {
         return messageService.getAll();
     }
 
-    @GetMapping({"idMessage"})
+    @GetMapping("/{idMessage}")
     public Optional<Message> getMessage(@PathVariable("idMessage")int idMessage) {
         return messageService.getMessage(idMessage);
     }
 
-    @GetMapping({"/save"})
+    @PostMapping({"/save"})
     @ResponseStatus(HttpStatus.CREATED)
     public Message save(@RequestBody Message message) {
         return messageService.save(message);
@@ -39,9 +39,9 @@ public class MessageController {
         return messageService.update(message);
     }
 
-    @DeleteMapping({"/id"})
+    @DeleteMapping({"/{idMessage}"})
     @ResponseStatus(HttpStatus.NO_CONTENT)
-    public boolean delete(@PathVariable("id") int idMessage) {
+    public boolean delete(@PathVariable("idMessage") int idMessage) {
         return messageService.deleteMessage(idMessage);
     }
 }
